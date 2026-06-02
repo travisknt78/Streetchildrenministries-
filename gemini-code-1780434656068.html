@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Children Ministries | Giving Hope, Changing Lives</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#D97706',
+                            darkgold: '#B45309',
+                            terracotta: '#C2410C',
+                            dark: '#1C1917',
+                            warmlight: '#FDFBF7',
+                            softgray: '#F5F5F4'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(rgba(28, 25, 23, 0.65), rgba(28, 25, 23, 0.85));
+        }
+    </style>
+</head>
+<body class="bg-brand-warmlight text-stone-800 font-sans antialiased">
+
+    <!-- Top Notification Bar -->
+    <div class="bg-brand-terracotta text-white text-xs md:text-sm py-2 px-4 text-center font-medium tracking-wide">
+        <i class="fa-solid fa-heart animate-pulse mr-2"></i> Join us in transforming lives today. Your support builds brighter futures!
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3">
+                <div class="bg-brand-gold p-2.5 rounded-xl text-white">
+                    <i class="fa-solid fa-child-reaching text-2xl"></i>
+                </div>
+                <div>
+                    <span class="text-lg md:text-xl font-bold tracking-tight text-brand-dark block uppercase">Street Children</span>
+                    <span class="text-xs md:text-sm tracking-widest text-brand-terracotta font-semibold block uppercase -mt-1">Ministries</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden lg:flex space-x-8 font-medium text-sm text-stone-600">
+                <a href="#about" class="hover:text-brand-terracotta transition-colors py-2">About Us</a>
+                <a href="#mission" class="hover:text-brand-terracotta transition-colors py-2">Our Mission</a>
+                <a href="#programs" class="hover:text-brand-terracotta transition-colors py-2">Programs</a>
+                <a href="#gallery" class="hover:text-brand-terracotta transition-colors py-2">Gallery</a>
+                <a href="#impact" class="hover:text-brand-terracotta transition-colors py-2">Our Impact</a>
+                <a href="#volunteer" class="hover:text-brand-terracotta transition-colors py-2">Volunteer</a>
+                <a href="#contact" class="hover:text-brand-terracotta transition-colors py-2">Contact</a>
+            </nav>
+
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="#donate" class="bg-brand-gold hover:bg-brand-darkgold text-white font-semibold px-6 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all text-sm tracking-wide">
+                    <i class="fa-solid fa-hand-holding-heart mr-2"></i>Donate Now
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-stone-700 hover:text-brand-terracotta focus:outline-none p-2" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dynamic Navigation Sidebar -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-stone-100 px-4 pt-2 pb-6 space-y-3 absolute top-20 left-0 w-full shadow-xl transition-all duration-300">
+            <a href="#about" class="block text-stone-700 hover:text-brand-terracotta font-medium py-2 border-b border-stone-50">About Us</a>
+            <a href="#mission" class="block text-stone-700 hover:text-brand-terracotta font-medium py-2 border-b border-stone-50">Our Mission</a>
+            <a href="#programs" class="block text-stone-700 hover:text-brand-terracotta font-medium py-2 border-b border-stone-50">Programs</a>
+            <a href="#gallery" class="block text-stone-700 hover:text-brand-terracotta font-medium py-2 border-b border-stone-50">Gallery</a>
+            <a href="#impact" class="block text-stone-700 hover:text-brand-terracotta font-medium py-2 border-b border-stone-50">Our Impact</a>
+            <a href="#volunteer" class="block text-stone-700 hover:text-brand-terracotta font-medium py-2 border-b border-stone-50">Volunteer</a>
+            <a href="#contact" class="block text-stone-700 hover:text-brand-terracotta font-medium py-2">Contact</a>
+            <div class="pt-4 flex flex-col space-y-3">
+                <a href="#donate" class="bg-brand-gold text-white text-center font-semibold py-3 rounded-xl shadow-md">
+                    <i class="fa-solid fa-hand-holding-heart mr-2"></i>Donate Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Homepage: Welcoming Hero Section -->
+    <section class="relative bg-brand-dark min-h-[85vh] flex items-center justify-center text-white overflow-hidden bg-cover bg-center" style="background-image: url('20260502_124928.jpg');">
+        <div class="absolute inset-0 hero-gradient"></div>
+        <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+            <span class="inline-flex items-center gap-2 bg-brand-gold/30 text-brand-gold text-xs md:text-sm font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full border border-brand-gold/40 mb-6">
+                <span class="w-2 h-2 rounded-full bg-brand-gold animate-ping"></span>Restoring Dreams & Dignity
+            </span>
+            <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight">
+                Giving Hope For A Better <span class="text-brand-gold italic">Future</span>
+            </h1>
+            <p class="text-base sm:text-lg md:text-xl text-stone-200 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
+                We empower and support vulnerable and street-connected children through sustainable education, holistic care programs, restorative support structures, and compassionate community outreach.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-5">
+                <a href="#donate" class="w-full sm:w-auto bg-brand-terracotta hover:bg-brand-darkgold text-white font-semibold px-8 py-4 rounded-full shadow-lg transition-all transform hover:-translate-y-0.5 text-center tracking-wide">
+                    Support Our Cause
+                </a>
+                <a href="#volunteer" class="w-full sm:w-auto bg-white hover:bg-stone-100 text-brand-dark font-semibold px-8 py-4 rounded-full shadow-lg transition-all transform hover:-translate-y-0.5 text-center tracking-wide">
+                    Become a Volunteer
+                </a>
+                <a href="#contact" class="w-full sm:w-auto bg-transparent border-2 border-white/60 hover:border-white text-white font-semibold px-8 py-4 rounded-full transition-all text-center tracking-wide">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                <div class="lg:col-span-5 relative">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-brand-gold/10 rounded-3xl -z-10"></div>
+                    <img src="20260527_114329.jpg" alt="About Street Children Ministries" class="rounded-2xl shadow-xl w-full object-cover aspect-[4/5] object-center">
+                    <div class="absolute -bottom-6 -right-6 bg-brand-dark text-white p-6 rounded-2xl shadow-xl max-w-xs hidden sm:block">
+                        <p class="font-serif italic text-lg text-brand-gold">"Every child deserves safety, a hot meal, and a real chance to smile."</p>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-block bg-brand-gold/10 text-brand-terracotta font-semibold text-xs uppercase tracking-widest px-3 py-1 rounded-md">
+                        Our Story
+                    </div>
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-brand-dark">
+                        Who We Are & Why We Serve
+                    </h2>
+                    <p class="text-stone-600 leading-relaxed text-base sm:text-lg">
+                        Street Children Ministries was founded out of a profound burden to provide immediate assistance, secure environments, and transformational hope to vulnerable and street-connected children. Witnessing the structural hardships, exploitation, and educational gaps faced by children living on the periphery of our community, our core founders set out to build an institutional sanctuary where restoration replaces despair.
+                    </p>
+                    <p class="text-stone-600 leading-relaxed text-base sm:text-lg">
+                        We don't merely address transient issues; we believe in sustainable development. By reconnecting children with functional care structures, giving them access to stable schooling, and conducting regular street interventions, we guide them toward becoming fulfilled, self-reliant global citizens.
+                    </p>
+                    <div class="pt-4 grid grid-cols-2 gap-6">
+                        <div class="border-l-4 border-brand-gold pl-4">
+                            <h4 class="font-bold text-stone-900 text-lg">Holistic Care</h4>
+                            <p class="text-sm text-stone-500 mt-1">Providing safe accommodations, balanced nutrition, and emotional therapy.</p>
+                        </div>
+                        <div class="border-l-4 border-brand-terracotta pl-4">
+                            <h4 class="font-bold text-stone-900 text-lg">Lifelong Learning</h4>
+                            <p class="text-sm text-stone-500 mt-1">Sponsoring dynamic learning systems and professional vocational paths.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission and Vision Section -->
+    <section id="mission" class="py-20 bg-brand-softgray relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-gold/5 rounded-full filter blur-2xl"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Mission Card -->
+                <div class="bg-white p-8 sm:p-10 rounded-2xl shadow-md border-t-4 border-brand-gold flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-gold/10 flex items-center justify-center text-brand-darkgold text-xl mb-6">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-brand-dark mb-4">Our Mission</h3>
+                        <p class="text-stone-600 leading-relaxed">
+                            To protect, care for, and integrate vulnerable and street-connected children by offering robust educational avenues, psychotherapeutic support networks, spiritual nourishment, and hands-on resource tools that reveal their inherent potential and hope for a better future.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Vision Card -->
+                <div class="bg-white p-8 sm:p-10 rounded-2xl shadow-md border-t-4 border-brand-terracotta flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-terracotta/10 flex items-center justify-center text-brand-terracotta text-xl mb-6">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-brand-dark mb-4">Our Vision</h3>
+                        <p class="text-stone-600 leading-relaxed">
+                            A just society where no child is left behind to experience absolute vulnerability on the streets, but rather every child lives safely within a loving ecosystem, acquiring an essential education to become a leading agent of community change.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs and Projects Section -->
+    <section id="programs" class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-terracotta font-semibold text-xs uppercase tracking-widest px-3 py-1 rounded-md bg-brand-terracotta/5">What We Do</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-dark mt-3">Our Structural Programs & Projects</h2>
+                <p class="text-stone-500 mt-4 text-base sm:text-lg">We use tailored programs designed to offer immediate rescue alongside sustainable lifelong stability.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Program 1 -->
+                <div class="bg-brand-warmlight rounded-2xl p-6 border border-stone-100 hover:shadow-xl transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-600 text-white flex items-center justify-center text-lg mb-6 shadow-md shadow-amber-600/20">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-brand-dark mb-2">Education Support</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            We provide formal tuition financing, dynamic modern school uniforms, backpacks, and counter books to make sure our children excel academically without worry.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="bg-brand-warmlight rounded-2xl p-6 border border-stone-100 hover:shadow-xl transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-orange-600 text-white flex items-center justify-center text-lg mb-6 shadow-md shadow-orange-600/20">
+                            <i class="fa-solid fa-users-rectangle"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-brand-dark mb-2">Community Outreach</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            Our field experts carry out targeted rehabilitation runs directly onto high-risk streets, administering nutritional care package bundles and identifying candidates for full program enrollment.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="bg-brand-warmlight rounded-2xl p-6 border border-stone-100 hover:shadow-xl transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-teal-700 text-white flex items-center justify-center text-lg mb-6 shadow-md shadow-teal-700/20">
+                            <i class="fa-solid fa-handshake-angle"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-brand-dark mb-2">Child Support Programs</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            Offers essential residential housing protection, regular balanced nutritional meals, emotional guidance, and complete primary clinical medical checkups.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Program 4 -->
+                <div class="bg-brand-warmlight rounded-2xl p-6 border border-stone-100 hover:shadow-xl transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-stone-800 text-white flex items-center justify-center text-lg mb-6 shadow-md shadow-stone-800/20">
+                            <i class="fa-solid fa-building-shield"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-brand-dark mb-2">Future Projects</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            Building a multipurpose modern residential learning center equipped with a tailored technical vocational complex for direct engineering and creative design training.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-brand-softgray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-gold font-semibold text-xs uppercase tracking-widest px-3 py-1 rounded-md bg-brand-gold/10">Moments in Focus</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-dark mt-3">Our Activity Gallery</h2>
+                <p class="text-stone-500 mt-4">Witness the real-life transformation, educational progress, and joyful moments within Street Children Ministries.</p>
+            </div>
+
+            <!-- Responsive Dynamic Photo Grid Layout -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="bg-white rounded-2xl p-3 shadow-sm hover:shadow-md transition-all group overflow-hidden">
+                    <div class="rounded-xl overflow-hidden aspect-square bg-stone-200">
+                        <img src="20260206_155349.jpg" alt="Children learning programs" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 object-center">
+                    </div>
+                    <p class="text-xs font-semibold uppercase text-brand-terracotta tracking-wider mt-3 px-1">Learning Programs</p>
+                    <p class="text-sm font-bold text-brand-dark px-1 mb-1">Distributing Essential Scholastic Supplies</p>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="bg-white rounded-2xl p-3 shadow-sm hover:shadow-md transition-all group overflow-hidden">
+                    <div class="rounded-xl overflow-hidden aspect-square bg-stone-200">
+                        <img src="VideoCapture_20260208-014204.jpg" alt="Community work distribution" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 object-center">
+                    </div>
+                    <p class="text-xs font-semibold uppercase text-brand-terracotta tracking-wider mt-3 px-1">Community Work</p>
+                    <p class="text-sm font-bold text-brand-dark px-1 mb-1">Resource Handouts & Outreaches</p>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="bg-white rounded-2xl p-3 shadow-sm hover:shadow-md transition-all group overflow-hidden">
+                    <div class="rounded-xl overflow-hidden aspect-square bg-stone-200">
+                        <img src="20260117_111016.jpg" alt="Children activities together" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 object-center">
+                    </div>
+                    <p class="text-xs font-semibold uppercase text-brand-terracotta tracking-wider mt-3 px-1">Children Activities</p>
+                    <p class="text-sm font-bold text-brand-dark px-1 mb-1">Smiles of Pure Hope & Belonging</p>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="bg-white rounded-2xl p-3 shadow-sm hover:shadow-md transition-all group overflow-hidden">
+                    <div class="rounded-xl overflow-hidden aspect-square bg-stone-200">
+                        <img src="IMG_0200.jpeg" alt="Community outreach meeting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 object-center">
+                    </div>
+                    <p class="text-xs font-semibold uppercase text-brand-terracotta tracking-wider mt-3 px-1">Events</p>
+                    <p class="text-sm font-bold text-brand-dark px-1 mb-1">Gathering Together as a Care Family</p>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="bg-white rounded-2xl p-3 shadow-sm hover:shadow-md transition-all group overflow-hidden">
+                    <div class="rounded-xl overflow-hidden aspect-square bg-stone-200">
+                        <img src="IMG_0201.jpeg" alt="Outreach support group" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 object-center">
+                    </div>
+                    <p class="text-xs font-semibold uppercase text-brand-terracotta tracking-wider mt-3 px-1">Community Work</p>
+                    <p class="text-sm font-bold text-brand-dark px-1 mb-1">Empowering Local Neighborhoods</p>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="bg-white rounded-2xl p-3 shadow-sm hover:shadow-md transition-all group overflow-hidden">
+                    <div class="rounded-xl overflow-hidden aspect-square bg-stone-200">
+                        <img src="20260526_140119.jpg" alt="Child sponsored by ministry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 object-center">
+                    </div>
+                    <p class="text-xs font-semibold uppercase text-brand-terracotta tracking-wider mt-3 px-1">Child Support</p>
+                    <p class="text-sm font-bold text-brand-dark px-1 mb-1">Nansubuga Keirah — Age 9</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-terracotta font-semibold text-xs uppercase tracking-widest px-3 py-1 rounded-md bg-brand-terracotta/5">The Proof of Care</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-dark mt-3">Our Transparent Impact</h2>
+                <p class="text-stone-500 mt-4">We are committed to delivering measurable, real-world change for every street-connected child.</p>
+            </div>
+
+            <!-- Statistics Grid -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center mb-20 bg-brand-warmlight p-8 sm:p-12 rounded-3xl border border-stone-100 shadow-sm">
+                <div>
+                    <span class="block text-4xl sm:text-5xl font-extrabold text-brand-terracotta font-serif">150+</span>
+                    <span class="block text-xs sm:text-sm font-medium tracking-wider text-stone-500 uppercase mt-2">Children Sheltered</span>
+                </div>
+                <div>
+                    <span class="block text-4xl sm:text-5xl font-extrabold text-brand-gold font-serif">450+</span>
+                    <span class="block text-xs sm:text-sm font-medium tracking-wider text-stone-500 uppercase mt-2">Books Distributed</span>
+                </div>
+                <div>
+                    <span class="block text-4xl sm:text-5xl font-extrabold text-brand-dark font-serif">2,500+</span>
+                    <span class="block text-xs sm:text-sm font-medium tracking-wider text-stone-500 uppercase mt-2">Meals Served</span>
+                </div>
+                <div>
+                    <span class="block text-4xl sm:text-5xl font-extrabold text-teal-700 font-serif">12+</span>
+                    <span class="block text-xs sm:text-sm font-medium tracking-wider text-stone-500 uppercase mt-2">Street Interventions</span>
+                </div>
+            </div>
+
+            <!-- Success Stories Carousel/Grid -->
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-dark text-center mb-10">Stories of Transformation</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+                <!-- Success Story 1 -->
+                <div class="bg-white rounded-2xl shadow-md border border-stone-100 p-6 sm:p-8 flex flex-col sm:flex-row gap-6 items-center">
+                    <img src="20260527_114436.jpg" alt="Sserunjonji Adrian success story" class="w-32 h-32 sm:w-40 sm:h-40 rounded-xl object-cover shrink-0 shadow-inner object-center">
+                    <div>
+                        <h4 class="text-xl font-bold text-brand-dark">Sserunjonji Adrian, 9 Years</h4>
+                        <span class="text-xs font-semibold text-brand-gold uppercase tracking-wide">Sponsored Student</span>
+                        <p class="text-stone-600 text-sm mt-3 leading-relaxed">
+                            "Before meeting Street Children Ministries, I didn't know if I would ever hold a pencil again. Today, I have a warm place to sleep, regular meals, and all the schoolbooks I need to follow my dreams."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Success Story 2 -->
+                <div class="bg-white rounded-2xl shadow-md border border-stone-100 p-6 sm:p-8 flex flex-col sm:flex-row gap-6 items-center">
+                    <img src="VideoCapture_20260208-014322.jpg" alt="Young student success story" class="w-32 h-32 sm:w-40 sm:h-40 rounded-xl object-cover shrink-0 shadow-inner object-center">
+                    <div>
+                        <h4 class="text-xl font-bold text-brand-dark">A Brighter Path Forward</h4>
+                        <span class="text-xs font-semibold text-brand-gold uppercase tracking-wide">Vocational Success</span>
+                        <p class="text-stone-600 text-sm mt-3 leading-relaxed">
+                            Through the academic distributions and mental checkups provided by our donors, children who were completely disconnected from schools are now placing top of their primary classes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donate Page / Section -->
+    <section id="donate" class="py-20 bg-brand-dark text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-brand-terracotta/20 via-brand-dark to-brand-dark"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="w-16 h-16 rounded-full bg-brand-gold text-white flex items-center justify-center text-2xl mx-auto mb-6 shadow-xl">
+                <i class="fa-solid fa-gift"></i>
+            </div>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4">Empower a Child Today</h2>
+            <p class="text-stone-300 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+                Your direct contribution sponsors school materials, stable healthcare services, secure housing, and warm nutritional feeding programs. Choose a customized option below to stand with us.
+            </p>
+
+            <!-- Donation Packages -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-brand-dark font-sans text-left mb-12">
+                <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-brand-gold">
+                    <span class="block text-xs uppercase tracking-wider font-semibold text-stone-400">Scholastic Package</span>
+                    <span class="block text-2xl font-bold mt-1 text-brand-dark">$25</span>
+                    <p class="text-xs text-stone-500 mt-2">Sponsors complete exercise books, high-quality backpacks, and school stationery supplies for 2 children.</p>
+                    <a href="YOUR_DONATION_LINK_HERE" class="block text-center mt-4 bg-brand-dark text-white font-semibold py-2 rounded-xl text-xs hover:bg-brand-gold transition-colors">Donate $25</a>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-brand-terracotta relative transform sm:-translate-y-2">
+                    <span class="absolute top-3 right-3 bg-brand-terracotta text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Most Needed</span>
+                    <span class="block text-xs uppercase tracking-wider font-semibold text-stone-400">Care & Education</span>
+                    <span class="block text-2xl font-bold mt-1 text-brand-dark">$50</span>
+                    <p class="text-xs text-stone-500 mt-2">Covers continuous academic training materials alongside daily clinical medical support parameters.</p>
+                    <a href="YOUR_DONATION_LINK_HERE" class="block text-center mt-4 bg-brand-terracotta text-white font-semibold py-2 rounded-xl text-xs hover:bg-brand-dark transition-colors">Donate $50</a>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-teal-700">
+                    <span class="block text-xs uppercase tracking-wider font-semibold text-stone-400">Complete Sanctuary</span>
+                    <span class="block text-2xl font-bold mt-1 text-brand-dark">$100</span>
+                    <p class="text-xs text-stone-500 mt-2">Sponsors residential accommodation access points, comprehensive therapeutic counseling, and balanced meals.</p>
+                    <a href="YOUR_DONATION_LINK_HERE" class="block text-center mt-4 bg-brand-dark text-white font-semibold py-2 rounded-xl text-xs hover:bg-teal-700 transition-colors">Donate $100</a>
+                </div>
+            </div>
+
+            <p class="text-xs text-stone-400">
+                Prefer offline checks or modern mobile money options? Please review our <a href="#contact" class="text-brand-gold underline font-medium">Contact Details</a> directly for processing support.
+            </p>
+        </div>
+    </section>
+
+    <!-- Volunteer Section -->
+    <section id="volunteer" class="py-20 bg-brand-softgray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-brand-terracotta font-semibold text-xs uppercase tracking-widest px-3 py-1 rounded-md bg-brand-terracotta/5">Join Our Family</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-dark">Become a Catalyst for Sustainable Change</h2>
+                    <p class="text-stone-600 leading-relaxed">
+                        No matter your professional background, your time, skills, and empathy can change a vulnerable child's life direction. We require volunteers for onsite community outreaches, basic academic coaching sessions, vocational workshop guidance, and global digital advocacy work.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="mt-1 text-brand-gold"><i class="fa-solid fa-check-to-slot"></i></div>
+                            <div>
+                                <h4 class="font-bold text-stone-900 text-sm">Flexible Onsite Engagements</h4>
+                                <p class="text-xs text-stone-500">Assist in the logistics of distributing textbooks and preparing meal structures.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="mt-1 text-brand-gold"><i class="fa-solid fa-check-to-slot"></i></div>
+                            <div>
+                                <h4 class="font-bold text-stone-900 text-sm">Digital Advocacy & Mentorship</h4>
+                                <p class="text-xs text-stone-500">Help share our success stories across global networks to scale our donor systems.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5">
+                    <!-- Dynamic Volunteer Sign-up Form Component -->
+                    <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-md border border-stone-100">
+                        <h3 class="font-bold text-xl text-brand-dark mb-4">Volunteer Application</h3>
+                        <form action="YOUR_FORM_HANDLER_OR_EMAIL_HERE" method="POST" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-stone-500 uppercase tracking-wider mb-1">Your Full Name</label>
+                                <input type="text" name="name" required placeholder="John Doe" class="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-sm focus:outline-none focus:border-brand-gold">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-stone-500 uppercase tracking-wider mb-1">Email Address</label>
+                                <input type="email" name="email" required placeholder="john@example.com" class="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-sm focus:outline-none focus:border-brand-gold">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-stone-500 uppercase tracking-wider mb-1">Area of Interest</label>
+                                <select name="interest" class="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-sm bg-white text-stone-700 focus:outline-none focus:border-brand-gold">
+                                    <option>Onsite Outreach & Support</option>
+                                    <option>Educational Tutoring</option>
+                                    <option>Fundraising & Partnerships</option>
+                                    <option>Administrative Assistance</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full bg-brand-dark hover:bg-brand-gold text-white font-semibold py-3 rounded-xl shadow text-sm transition-colors mt-2">
+                                Submit Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Page / Section -->
+    <section id="contact" class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-terracotta font-semibold text-xs uppercase tracking-widest px-3 py-1 rounded-md bg-brand-terracotta/5">Get In Touch</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-dark mt-3">We Would Love to Hear From You</h2>
+                <p class="text-stone-500 mt-4">Connect directly with our administration teams for quick inquiries, partnerships, or donations verification support.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Contact info cards -->
+                <div class="lg:col-span-5 space-y-4">
+                    <!-- Phone -->
+                    <div class="flex items-center p-4 bg-brand-warmlight rounded-xl border border-stone-100">
+                        <div class="w-10 h-10 rounded-lg bg-brand-gold text-white flex items-center justify-center shrink-0 text-base shadow-sm"><i class="fa-solid fa-phone"></i></div>
+                        <div class="ml-4">
+                            <span class="block text-xs font-semibold uppercase tracking-wider text-stone-400">Phone Number</span>
+                            <a href="tel:+256000000000" class="text-sm font-bold text-brand-dark hover:text-brand-terracotta transition-colors">+256 000 000 000 (Replace Info)</a>
+                        </div>
+                    </div>
+
+                    <!-- WhatsApp Dynamic Button -->
+                    <div class="flex items-center p-4 bg-emerald-50 rounded-xl border border-emerald-100">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-600 text-white flex items-center justify-center shrink-0 text-base shadow-sm"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div class="ml-4">
+                            <span class="block text-xs font-semibold uppercase tracking-wider text-emerald-600">WhatsApp Chat Support</span>
+                            <a href="https://wa.me/256000000000" target="_blank" class="text-sm font-bold text-emerald-900 hover:underline">Chat Instantly With Us</a>
+                        </div>
+                    </div>
+
+                    <!-- Email Address -->
+                    <div class="flex items-center p-4 bg-brand-warmlight rounded-xl border border-stone-100">
+                        <div class="w-10 h-10 rounded-lg bg-brand-terracotta text-white flex items-center justify-center shrink-0 text-base shadow-sm"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="ml-4">
+                            <span class="block text-xs font-semibold uppercase tracking-wider text-stone-400">Email Address</span>
+                            <a href="mailto:info@streetchildrenministries.org" class="text-sm font-bold text-brand-dark hover:text-brand-terracotta transition-colors">info@streetchildrenministries.org</a>
+                        </div>
+                    </div>
+
+                    <!-- Location details -->
+                    <div class="flex items-center p-4 bg-brand-warmlight rounded-xl border border-stone-100">
+                        <div class="w-10 h-10 rounded-lg bg-stone-800 text-white flex items-center justify-center shrink-0 text-base shadow-sm"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="ml-4">
+                            <span class="block text-xs font-semibold uppercase tracking-wider text-stone-400">Main Office Location</span>
+                            <span class="text-sm font-bold text-brand-dark block">Kampala, Uganda (Insert Specific Street Address)</span>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="p-6 bg-brand-softgray rounded-xl text-center">
+                        <span class="block text-xs font-semibold uppercase tracking-wider text-stone-500 mb-3">Follow Our Social Updates</span>
+                        <div class="flex justify-center space-x-4 text-lg">
+                            <a href="#" class="w-10 h-10 rounded-full bg-white text-blue-600 shadow-sm flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white text-sky-400 shadow-sm flex items-center justify-center hover:bg-sky-400 hover:text-white transition-all"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white text-pink-600 shadow-sm flex items-center justify-center hover:bg-pink-600 hover:text-white transition-all"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white text-red-600 shadow-sm flex items-center justify-center hover:bg-red-600 hover:text-white transition-all"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Message Form Panel -->
+                <div class="lg:col-span-7 bg-brand-softgray p-6 sm:p-10 rounded-3xl border border-stone-200">
+                    <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-dark mb-2">Send a Direct Message</h3>
+                    <p class="text-xs text-stone-500 mb-6">Fill in the fields below and our community care secretary will follow up within 24 hours.</p>
+                    <form action="YOUR_CONTACT_FORM_HANDLER_HERE" method="POST" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-medium text-stone-600 mb-1">Your Name</label>
+                                <input type="text" name="name" required class="w-full px-4 py-2.5 rounded-xl bg-white border border-stone-200 text-sm focus:outline-none focus:border-brand-gold">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-stone-600 mb-1">Email Address</label>
+                                <input type="email" name="email" required class="w-full px-4 py-2.5 rounded-xl bg-white border border-stone-200 text-sm focus:outline-none focus:border-brand-gold">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-stone-600 mb-1">Subject</label>
+                            <input type="text" name="subject" required class="w-full px-4 py-2.5 rounded-xl bg-white border border-stone-200 text-sm focus:outline-none focus:border-brand-gold">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-stone-600 mb-1">Message Content</label>
+                            <textarea name="message" rows="4" required class="w-full px-4 py-2.5 rounded-xl bg-white border border-stone-200 text-sm focus:outline-none focus:border-brand-gold"></textarea>
+                        </div>
+                        <button type="submit" class="w-full sm:w-auto bg-brand-terracotta hover:bg-brand-dark text-white font-semibold px-8 py-3.5 rounded-xl shadow transition-colors text-sm tracking-wide">
+                            <i class="fa-solid fa-paper-plane mr-2"></i>Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Area -->
+    <footer class="bg-brand-dark text-stone-400 text-sm py-12 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <p class="font-serif text-white font-bold tracking-wide uppercase">Street Children Ministries</p>
+            <p class="max-w-md mx-auto text-xs text-stone-500">
+                Registered Non-Profit Organization supporting street-connected youth through compassionate intervention and deep social inclusion.
+            </p>
+            <p class="text-xs text-stone-600 pt-4 border-t border-stone-950">
+                &copy; 2026 Street Children Ministries. All Rights Reserved. Designed to encourage global care support.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Handling Mobile Menu Interactions -->
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close dropdown when picking nav items smoothly
+        const navLinks = mobileMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
